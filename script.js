@@ -5,12 +5,18 @@ function countWords() {
     const text = document.getElementById('inputText').value;
     const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     const wordCount = words.length;
-    document.getElementById('wordCount').innerText = `Words: ${wordCount} / 1200`;
+    document.getElementById('wordCount').innerText = `${wordCount} / 1200 words`;
 
     if (wordCount > 1200) {
         document.getElementById('inputText').value = words.slice(0, 1200).join(' ');
     }
 }
+
+
+
+
+
+
 
 function summarizeText() {
     const text = document.getElementById('inputText').value;
